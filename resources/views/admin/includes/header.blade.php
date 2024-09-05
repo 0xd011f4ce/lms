@@ -328,8 +328,8 @@
                                 <a class="dropdown-item" href="javascript:;">
                                     <div class="d-flex align-items-center">
                                         <div class="user-online">
-                                            <img src="assets/images/avatars/avatar-1.png" class="msg-avatar"
-                                                alt="user avatar">
+                                            <img src="{{ asset('backend/assets/images/avatars/avatar-1.png') }}"
+                                                class="msg-avatar" alt="user avatar">
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="msg-name">Daisy Anderson<span class="msg-time float-end">5 sec
@@ -353,8 +353,8 @@
                                 <a class="dropdown-item" href="javascript:;">
                                     <div class="d-flex align-items-center">
                                         <div class="user-online">
-                                            <img src="assets/images/avatars/avatar-2.png" class="msg-avatar"
-                                                alt="user avatar">
+                                            <img src="{{ asset('assets/images/avatars/avatar-1.png') }}"
+                                                class="msg-avatar" alt="user avatar">
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="msg-name">Althea Cabardo <span class="msg-time float-end">14
@@ -674,8 +674,11 @@
                     <li>
                         <div class="dropdown-divider mb-0"></div>
                     </li>
-                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                class="bx bx-log-out-circle"></i><span>Logout</span></a>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="{{ route('admin.logout') }}">
+                            <i class="bx bx-log-out-circle"></i>
+                            <span>Logout</span>
+                        </a>
                     </li>
                 </ul>
             </div>

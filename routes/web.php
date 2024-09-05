@@ -25,6 +25,7 @@ require __DIR__ . '/auth.php';
 // admin group middleware
 Route::middleware(["auth", "roles:admin"])->group(function () {
     Route::get("/admin/dashboard", [AdminController::class, "AdminDashboard"])->name("admin.dashboard");
+    Route::get("/admin/logout", [AdminController::class, "AdminLogout"])->name("admin.logout");
 });
 
 // instructor group middleware
